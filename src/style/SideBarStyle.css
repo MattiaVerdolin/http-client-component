@@ -1,0 +1,130 @@
+/* Contenitore principale della sidebar */
+.sidebar-container {
+    width: 260px;
+    background-color: #fff;
+    border-right: 1px solid #eee;
+    padding: 16px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+/* Titolo */
+h3 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Contenitore principale: disposizione orizzontale */
+.save-section {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Spaziatura orizzontale tra i due elementi */
+    margin-bottom: 1rem;
+}
+
+/* Contenitore della barra di ricerca */
+.search-container {
+    margin-bottom: 16px;
+}
+
+/* Spaziatura tra le collezioni */
+.dropDownComponent {
+    margin-bottom: 8px;
+}
+
+/* Pulsante per aggiungere nuove collezioni */
+.add-collection {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.save-as :global(.dropdown) {
+    position: relative;
+    display: inline-block; /* o block, se preferisci */
+}
+
+/* Fai sì che il menu si apra in posizione assoluta, sopra il resto */
+.save-as :global(.dropdown-menu) {
+    position: absolute;
+    top: 100%;   /* subito sotto il bottone */
+    left: 0;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #ccc;
+    min-width: 140px;
+    white-space: nowrap;
+}
+
+/* Esempio di stile per gli item */
+.save-as :global(.dropdown-item) {
+    white-space: nowrap;
+    padding: 8px 12px;
+    cursor: pointer;
+    max-width: 200px;
+}
+.save-as :global(.dropdown-item:hover) {
+    background-color: #eee;
+}
+
+.request-row {
+    display: flex;
+    align-items: center;   /* Allinea il pulsante e il testo in orizzontale */
+    justify-content: space-between; /* Separa il testo e il pulsante */
+    padding: 5px 10px;    /* Spazio uniforme attorno agli elementi */
+    background-color: #f8f9fa; /* Sfondo leggero per visibilità */
+    border-radius: 5px;
+}
+
+.request-row span {
+    flex-grow: 1;         /* Fa sì che il testo prenda lo spazio disponibile */
+}
+
+.delete-request-btn :global(button){
+    background-color: #dc3545; /* Rosso intenso */
+    width: 22px;
+    height: 22px;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.delete-request-btn :global(button:hover){
+    background-color: #a71d2a;
+}
+
+.request-row {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.request-row:hover {
+    background-color: #f0f0f0;
+}
+
+.import-export-buttons {
+    display: flex;
+    gap: 8px;
+    font-weight: bold;
+    justify-content: center; /* Centra i pulsanti */
+    padding-top: 20px;
+}
+
+.import-export-buttons :global(button){
+    width: 100px;
+}
+
+@media (max-width: 768px) {
+    .sidebar-container {
+        display: none;
+    }
+}

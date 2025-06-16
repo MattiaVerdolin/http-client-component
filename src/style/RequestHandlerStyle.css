@@ -1,0 +1,129 @@
+.request-handler {
+    background-color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+}
+
+.upper-bar{
+    display: flex;
+    align-items: stretch;
+    gap: 8px;
+}
+
+.top-section {
+    display: flex;
+    align-items: center;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    background-color: #fff;
+    width: 100%;
+    padding: 4px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.uri-input {
+    flex: 1;
+    padding: 0 8px;
+}
+
+.send-button :global(button) {
+    width: 90px;
+    height: 35px;
+}
+
+.new-request-button {
+    display: flex;
+
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 12px;
+}
+
+.new-request-button :global(button) {
+    background-color: limegreen;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    font-size: 20px;
+    padding: 8px 12px;
+}
+
+.bottom-section {
+    display: flex;
+    gap: 10px;
+}
+
+/* Tabella e celle interne */
+.headers table {
+    border: 1px solid #aaa;
+    width: 50%;
+    border-collapse: collapse;
+}
+
+.headers th,
+.headers td {
+    border: 1px solid #aaa;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0;
+    font-size: 16px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Centra il pulsante del cestino nella cella */
+.delete-btn :global(button){
+    background-color: #d32f2f;
+    margin: 0 auto;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+}
+
+.delete-btn :global(button:hover){
+    background-color: #a71d2a;
+}
+
+/* Rendi il box "request body content" simile agli altri input */
+.request-body {
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 8px;
+    box-sizing: border-box; /* Necessario se vuoi che l’eventuale padding non tagli la textarea */
+    display: flex;          /* In modo che l’elemento figlio possa usare flex:1 */
+}
+
+.request-body :global(.input-container) {
+    flex: 1;
+}
+
+.method-selection :global(.dropdown) {
+    position: relative;
+    display: inline-block; /* o block, se preferisci */
+}
+
+/* Fai sì che il menu si apra in posizione assoluta, sopra il resto */
+.method-selection :global(.dropdown-menu) {
+    position: absolute;
+    top: 100%;   /* subito sotto il bottone */
+    left: 0;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #ccc;
+    min-width: 100px;
+    /* aggiungi margini, padding, ecc. a piacere */
+}
+
+/* Esempio di stile per gli item */
+.method-selection :global(.dropdown-item) {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+.method-selection :global(.dropdown-item:hover) {
+    background-color: #eee;
+}
